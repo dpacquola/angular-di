@@ -14,7 +14,7 @@ type Config = {
 )
 export class SettingsService {
   config = signal<Config>({
-    title: 'Angular Shop',
+    title: 'Angular 17 DI Shop',
     color: '#ffffff',
     enableShop: true
   })
