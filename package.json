@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href \"https://dpacquola.github.io/angular-di/\"",
+    "deploy": "ngh --dir=dist/angular-di/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -27,6 +28,7 @@
     "@angular/cli": "^18.2.12",
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.14",
     "jasmine-core": "~5.2.0",
