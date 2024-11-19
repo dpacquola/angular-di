@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EditorComponent } from './components/editor.component';
 import { PreviewComponent } from './components/preview.component';
-// import {NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-settings',
@@ -9,25 +9,25 @@ import { PreviewComponent } from './components/preview.component';
   imports: [
     EditorComponent,
     PreviewComponent,
-    // NgOptimizedImage
+    NgOptimizedImage
   ],
   template: `
     <h1 class="text-3xl text-center my-6">Settings</h1>
 
     <div class="flex flex-col md:flex-row mx-3">
       <div class="w-full md:w-1/2">
-        <app-editor />
+        <app-editor/>
       </div>
       <div class="w-full md:w-1/2">
-        <app-preview />
+        <app-preview/>
       </div>
     </div>
 
-<!-- se clicco sul bottone o scrivo sulla input renderizzo tutto anche se
-     non sto modificando nulla relativamente alla editor e alla preview
-     Quindi devo usare
-        changeDetection: ChangeDetectionStrategy.OnPush,
-     sia sulla navbar che in editor e preview -->
+    <!-- se clicco sul bottone o scrivo sulla input renderizzo tutto anche se
+         non sto modificando nulla relativamente alla editor e alla preview
+         Quindi devo usare
+            changeDetection: ChangeDetectionStrategy.OnPush,
+         sia sulla navbar che in editor e preview -->
     <button (click)="doNothing()">do nothing</button>
     <input type="text" (keydown)="doNothing()">
 
@@ -36,7 +36,7 @@ import { PreviewComponent } from './components/preview.component';
     <div class="page">
       <h1>Demo CDN + ngSRC ssss </h1>
 
-      <img src="https://gqctmza7.dev.cdn.imgeng.in/assets/images/img_big.JPG" alt=""
+      <img ngSrc="assets/images/img_big.JPG" alt=""
            width="400" height="400"
            ngSrcset="600w, 1024w, 1400w"
            sizes="(max-width: 600px) 100vw, 50vw"
@@ -45,7 +45,7 @@ import { PreviewComponent } from './components/preview.component';
 
       <div>Powered by</div>
       <img
-        src="https://gqctmza7.dev.cdn.imgeng.in/assets/images/js.png?imgeng=w_200" alt=""
+        ngSrc="assets/images/js.png?imgeng=w_200" alt=""
         [width]="200"
         [height]="70"
       >
