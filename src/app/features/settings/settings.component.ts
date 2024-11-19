@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EditorComponent } from './components/editor.component';
 import { PreviewComponent } from './components/preview.component';
-import {NgOptimizedImage} from '@angular/common';
+// import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-settings',
@@ -9,7 +9,7 @@ import {NgOptimizedImage} from '@angular/common';
   imports: [
     EditorComponent,
     PreviewComponent,
-    NgOptimizedImage
+    // NgOptimizedImage
   ],
   template: `
     <h1 class="text-3xl text-center my-6">Settings</h1>
@@ -34,9 +34,9 @@ import {NgOptimizedImage} from '@angular/common';
     <br><br><br>
 
     <div class="page">
-      <h1>Demo CDN + ngSRC  </h1>
+      <h1>Demo CDN + ngSRC ssss </h1>
 
-      <img src="../../assets/images/img_big.JPG" alt=""
+      <img src="assets/images/img_big.JPG" alt=""
            width="400" height="400"
            ngSrcset="600w, 1024w, 1400w"
            sizes="(max-width: 600px) 100vw, 50vw"
@@ -45,7 +45,7 @@ import {NgOptimizedImage} from '@angular/common';
 
       <div>Powered by</div>
       <img
-        src="../../assets/images/js.png?imgeng=w_200" alt=""
+        src="assets/images/js.png?imgeng=w_200" alt=""
         [width]="200"
         [height]="70"
       >
